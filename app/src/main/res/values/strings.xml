@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Lost &amp; Found</string>
+    <string name="maps_api_key">AIzaSyBd10X-PfZYkOL4ry6jNEiRmRDDCl2BZ2Y</string>
+
+
+
+    <string-array name="categories">
+        <item>Electronics</item>
+        <item>Pets</item>
+        <item>Wallets</item>
+        <item>Keys</item>
+        <item>Clothing</item>
+        <item>Bags</item>
+        <item>Documents</item>
+        <item>Other</item>
+    </string-array>
+</resources>

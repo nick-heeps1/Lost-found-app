@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.lost_found_app.ui.HomeFragment"
+        android:label="Lost &amp; Found"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_homeFragment_to_addAdvertFragment"
+            app:destination="@id/addAdvertFragment" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_itemListFragment"
+            app:destination="@id/itemListFragment" />
+
+        <!-- Task 9.1 -->
+        <action
+            android:id="@+id/action_homeFragment_to_mapsFragment"
+            app:destination="@id/mapsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addAdvertFragment"
+        android:name="com.example.lost_found_app.ui.AddAdvertFragment"
+        android:label="Create Advert"
+        tools:layout="@layout/fragment_add_advert" />
+
+    <fragment
+        android:id="@+id/itemListFragment"
+        android:name="com.example.lost_found_app.ui.ItemListFragment"
+        android:label="Lost &amp; Found Items"
+        tools:layout="@layout/fragment_item_list">
+
+        <action
+            android:id="@+id/action_itemListFragmentToItemDetailFragment"
+            app:destination="@id/itemDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/itemDetailFragment"
+        android:name="com.example.lost_found_app.ui.ItemDetailFragment"
+        android:label="Item Detail"
+        tools:layout="@layout/fragment_item_detail">
+
+        <argument
+            android:name="itemId"
+            app:argType="integer" />
+    </fragment>
+
+    <!-- Task 9.1 – map screen -->
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="com.example.lost_found_app.ui.MapsFragment"
+        android:label="Show on Map"
+        tools:layout="@layout/fragment_maps" />
+
+</navigation>
